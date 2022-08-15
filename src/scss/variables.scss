@@ -1,0 +1,85 @@
+// Базовые цвета https://colorscheme.ru/color-converter.html
+
+$black:                       hsl(0, 0%, 0%);
+$white:                       hsl(0, 0%, 100%);
+
+$main-color: #444444;
+$accent-color: #FF8007;
+$light-primary-color: #0056B3;
+$primary-color: #455582; 
+$bg-color: #F0F5F9; 
+$pagin-color: #99A2BA;
+$box-color: #DFE5EE;
+$border-color: #E1E4EB;
+$input-color: #E6ECF2;
+
+
+
+
+// Базовая типографика
+
+$font-size:                   16px;         
+
+$font-size-h1:                40px;
+$font-size-h2:                32px;
+$font-size-h3:                24px;
+$font-size-h4:                18px;
+$font-size-h5:                16px;
+$font-size-h6:                16px;
+
+$font-size-sm:                0.75em; // 12px от 16px
+
+$line-height:                 1.2;
+
+$typo-margin-vertical:        1em;
+
+$ff-r-l: 'Robotolight', sans-serif;
+$ff-r-r:'Roboto', sans-serif;
+$ff-r-b:'Robotobold', sans-serif;
+$ff-r-black:             'Robotoblack', sans-serif;
+$ff-opens:               'OpenSans-Light', sans-serif;  
+$ff-g-ex-b:              'Gilroy-Extrabold', sans-serif;  
+$ff-g-r:                 'Gilroy-Regular', sans-serif;  
+
+$font-family--monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  Liberation Mono, Courier New, monospace;
+
+
+// Ширины
+
+$screen-xs:                   480px;
+$screen-sm:                   576px;
+$screen-md:                   768px;
+$screen-lg:                   992px;
+$screen-xl:                   1280px;
+$screen-xxl:                  1710px;
+
+$container-sm:                100%;
+$container-md:                100%;
+$container-lg:                $screen-lg - 30;
+$container-xl:                $screen-xl - 30;
+$container-xxl:               $screen-xxl - 30;
+
+
+
+// Модульная сетка
+
+$grid-columns:                10;
+$grid-gutter-width:           30px;
+
+
+
+// Разное
+
+$field-padding-vertical:      5px;
+$field-padding-horizontal:    12px;
+
+$border-radius:               5px;
+$opacity:                     0.7;
+$transition-time:             0.3s;
+$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+
+$menu-desktop-width:          $screen-lg;
+$toggler-part-height:         2px;
+ 
+$z-index-modal:               100;

@@ -1,0 +1,51 @@
+//- Все примеси в этом файле должны начинаться c имени блока (paper)
+
+mixin paper(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +paper('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' paper--' + modsList[i].trim();
+      }
+    }
+
+  section.a-section.paper(class=allMods)&attributes(attributes)
+    .paper__inner.container 
+      h2.paper__title
+        a.paper__title-link.title-h2(href="") Корпоративное телевидение и газета
+      ul.paper__list.main-list 
+        li.paper__item
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper2.jpg", alt="Новость2")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper3.jpg", alt="Новость3")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+      .paper__all
+        a(href="#").media-article__btn.btn.btn-accent Все теплые вести

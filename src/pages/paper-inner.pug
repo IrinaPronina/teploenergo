@@ -1,0 +1,100 @@
+extends ../pug/layout.pug
+
+block meta
+  title Газета «Теплые вести» Июль 2021
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+
+  section.album-det.news.a-section(class=allMods)&attributes(attributes)
+    .album-det__inner.container
+      h2.album-det__title.title-h2
+        a(href="").album-det__title-link.title-h2.accent-hover Июль 2021
+      ul.paper__list 
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper2.jpg", alt="Новость2")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper3.jpg", alt="Новость3")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper2.jpg", alt="Новость2")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper3.jpg", alt="Новость3")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper2.jpg", alt="Новость2")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper3.jpg", alt="Новость3")
+            .recent-article__meta
+              time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
+      +pagination()               
+    
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

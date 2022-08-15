@@ -1,0 +1,97 @@
+//- Все примеси в этом файле должны начинаться c имени блока (hr-help)
+
+mixin hr-help(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +hr-help('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' hr-help--' + modsList[i].trim();
+      }
+    }
+
+  section.hr-help.a-section(class=allMods)&attributes(attributes)
+    .hr-help__inner.container
+      h2.hr-help__title
+        a.hr-help__title-link.title-h2.accent-hover(href="#") Кадровый помощник
+      h3.hr-help__subtitle.subtitle Специалисты управления по работе с персоналом
+      .hr-help__text Переподготовка рабочих и&nbsp;служащих&nbsp;&mdash; профессиональное обучение лиц, уже имеющих профессию рабочего, профессии рабочих или должность служащего, в&nbsp;целях получения новой профессии рабочего или должности служащего с&nbsp;учётом потребностей производства, вида профессиональной деятельности
+      .hr-help__slider.swiper  
+        ul.hr-help__list.swiper-wrapper 
+          li.hr-help__item.swiper-slide
+            article.recent-article.hr-help__article 
+              .recent-article__pic.hr-help__pic
+                img.recent-article__img(src="img/hr1.jpg", alt="Руководитель1")
+              .recent-article__meta.hr-help__meta
+                h3.recent-article__title
+                  a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Иванова Мария Ивановна
+                .hr-help__position.text-info Руководитель отдела кадров
+                .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+                .hr-help__data
+                  a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                  a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+                .hr-help__all
+                  a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+          li.hr-help__item.swiper-slide 
+            article.recent-article.hr-help__article 
+              .recent-article__pic.hr-help__pic
+                img.recent-article__img(src="img/hr2.jpg", alt="Руководитель1")
+              .recent-article__meta.hr-help__meta
+                h3.recent-article__title
+                  a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Иванова Мария Ивановна
+                .hr-help__position.text-info Руководитель отдела кадров
+                .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+                .hr-help__data
+                  a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                  a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+                .hr-help__all
+                  a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+          li.hr-help__item.swiper-slide 
+            article.recent-article.hr-help__article 
+              .recent-article__pic.hr-help__pic
+                img.recent-article__img(src="img/hr3.jpg", alt="Руководитель1")
+              .recent-article__meta.hr-help__meta
+                h3.recent-article__title
+                  a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Иванова Мария Ивановна
+                .hr-help__position.text-info Руководитель отдела кадров
+                .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+                .hr-help__data
+                  a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                  a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+                .hr-help__all
+                  a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        .hr-help__pagination.swiper-pagination
+      h3.hr-help__subtitle.hr-doc.subtitle Шаблоны типовых документов
+      .hr-doc__slider._same-height.swiper 
+        div.hr-doc__list.swiper-wrapper
+          div.hr-doc__item.swiper-slide
+            a(href="/").hr-doc__link
+              h4.hr-doc__doc-title.news-title Командировки
+              .hr-doc__btn 
+                span.hr-doc__more.more-link Подробнее
+          div.hr-doc__item.swiper-slide
+            a(href="/").hr-doc__link
+              h4.hr-doc__doc-title.news-title Отсутствие на работе
+              .hr-doc__btn 
+                span.hr-doc__more.more-link Подробнее
+          div.hr-doc__item.swiper-slide
+            a(href="/").hr-doc__link
+              h4.hr-doc__doc-title.news-title Сверхурочная работа
+              .hr-doc__btn 
+                span.hr-doc__more.more-link Подробнее
+          div.hr-doc__item.swiper-slide
+            a(href="/").hr-doc__link
+              h4.hr-doc__doc-title.news-title Материальная помощь
+              .hr-doc__btn 
+                span.hr-doc__more.more-link Подробнее
+        .hr-help__pagination.swiper-pagination
+      .hr-help__all.hr-help__div
+        a(href="#").media-article__btn.btn.btn-accent Все кадровые отделы

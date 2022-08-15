@@ -1,0 +1,111 @@
+// В этом файле должны быть стили для БЭМ-блока comments, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.comments {
+
+  $block-name: &; // #{$block-name}__element
+
+  &__wrapper {
+    max-width: 600px;
+  }
+
+  &__title {
+    font: 24px $ff-g-ex-b;
+    color: $primary-color;
+  }
+
+  &__list {
+    list-style: none;
+
+    &--reply {
+      padding-left: 60px;
+      clear: both;
+      margin-top: 15px;
+    }
+  }
+
+
+  &__author {
+    margin-bottom: 6px;
+  }
+
+  &__name {
+    font: 18px $ff-g-ex-b;
+  }
+
+  &__content {
+    margin-bottom: 15px;
+  }
+
+  &__open {
+    padding: 15px 0;
+  }
+
+  &__reply {
+    color: $pagin-color;
+    border: none;
+    background-color: $bg-color;
+    border-bottom: 1px dashed $pagin-color;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__footer {
+    visibility: hidden;
+    height:0;
+    overflow:hidden;
+    opacity: 0;
+    transition: all $transition-time;
+  }
+
+  .comments-open {
+    .comments__footer {
+      padding: 20px 0;
+      visibility: visible;
+      height:auto;
+      overflow:none;
+      opacity: 1;
+      transition: all $transition-time;
+    }
+  }
+
+  &__input {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    border: 1px solid $pagin-color;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    font: 14px/1.5 $ff-r-l;
+    color: $primary-color;
+    padding: 11px 20px;
+    margin-top: 4px;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font: 14px/1.5 $ff-r-l;
+      color: $primary-color;
+
+      @media (min-width: $screen-xxl) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__leave {
+    margin-bottom: 40px;
+  }
+
+}

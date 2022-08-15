@@ -1,0 +1,212 @@
+// В этом файле должны быть стили для БЭМ-блока hr-help, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.hr-help {
+
+  $block-name: &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 55px;
+    }
+
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 31.5%;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    background-color: $white;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 31.5%;
+
+    }
+  }
+
+  &__article {
+    padding: 20px;
+
+
+    @media (min-width: $screen-lg) {
+      padding: 30px;
+    }
+  }
+
+  &__pic {
+
+    height: 205px;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      height: 250px;
+    }
+  }
+
+  &__about {
+    font-size: 14px;
+    color: $main-color;
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__cont {
+    display: block;
+    text-decoration: none;
+    transition: all $transition-time;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  &__tel {
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    margin: 0 0 20px 0;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__data {
+    padding: 20px 0;
+
+    @media (min-width: $screen-xl) {
+      padding: 30px 0;
+    }
+  }
+
+  &__position {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .recent-article__pic {
+    margin-bottom: 0;
+  }
+}
+
+
+.hr-doc {
+  &__list {
+    display: flex;
+    list-style: none;
+
+
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    background-color: $white;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    &--primary {
+      background-color: $primary-color;
+      color: $white;
+
+      .hr-doc__doc-title {
+        color: $white;
+      }
+
+      .hr-doc__more {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background-color: $primary-color;
+
+      .hr-doc__doc-title {
+        color: $white;
+      }
+
+      .hr-doc__more {
+        color: $accent-color;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 23%;
+    }
+
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px;
+    text-decoration: none;
+  }
+
+  &__doc-title {
+    color: $primary-color;
+    margin: 0 0 28px 0;
+    transition: color $transition-time;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__more {
+    color: $primary-color;
+    font: 13px $ff-g-ex-b;
+    transition: color $transition-time;
+  }
+
+  &__pagination.swiper-pagination {
+    bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+}

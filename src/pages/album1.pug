@@ -1,0 +1,57 @@
+extends ../pug/layout.pug
+
+block meta
+  title Альбом №1
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+
+  section.album-det.news.a-section(class=allMods)&attributes(attributes)
+    .album-det__inner.container
+      h2.album-det__title.title-h2
+        a(href="").album-det__title-link.title-h2.accent-hover  
+      ul.album-det__list
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo1.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo2.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo3.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo1.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo2.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo3.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo1.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo2.jpg", alt="Новость1")
+        li.album-det__item
+          .album-det__pic
+              img.album-det__img(src="img/photo3.jpg", alt="Новость1")
+      .album-det__bottom.return
+        a(href="/").album-det__link.return__link Вернуться к списку альбомов
+      +pagination()               
+    
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

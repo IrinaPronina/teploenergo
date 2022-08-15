@@ -1,0 +1,67 @@
+//- Все примеси в этом файле должны начинаться c имени блока (recent-news)
+
+mixin recent-news(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +recent-news('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' recent-news--' + modsList[i].trim();
+      }
+    }
+
+  section.recent-news.a-section(class=allMods)&attributes(attributes)
+    .recent-news__inner.container
+      h2.recent-news__title
+        a(href="").recent-news__title-link.title-h2.accent-hover Новости
+      ul.recent-news__list.recent-news__list--news
+        li.recent-news__item 
+          article.recent-article 
+            .recent-article__pic.recent-news__pic
+              img.recent-article__img(src="img/news1.jpg", alt="Новость1")
+            .recent-article__meta
+              time(datetime="2020-12-04 19:00").recent-article__date 04.12.2020
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Конкурс чистоты и порядка
+              .recent-article__data 
+                span.recent-article__view 125
+                span.recent-article__comment 15
+                .recent-article__em 
+                  span.recent-article__like 63
+                  span.recent-article__dislike 2
+        li.recent-news__item 
+          article.recent-article 
+            .recent-article__pic.recent-news__pic
+              img.recent-article__img(src="img/news2.jpg", alt="Новость2")
+            .recent-article__meta
+              time(datetime="2020-12-04 19:00").recent-article__date 04.12.2020
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Конкурс чистоты и порядка
+              .recent-article__data 
+                span.recent-article__view 125
+                span.recent-article__comment 15
+                .recent-article__em 
+                  span.recent-article__like 63
+                  span.recent-article__dislike 2
+        li.recent-news__item 
+          article.recent-article 
+            .recent-article__pic.recent-news__pic
+              img.recent-article__img(src="img/news3.jpg", alt="Новость3")
+            .recent-article__meta
+              time(datetime="2020-12-04 19:00").recent-article__date 04.12.2020
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#")  Конкурс чистоты и порядка
+              .recent-article__data 
+                span.recent-article__view 125
+                span.recent-article__comment 15
+                .recent-article__em 
+                  span.recent-article__like 63
+                  span.recent-article__dislike 2

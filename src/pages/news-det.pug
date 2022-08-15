@@ -1,0 +1,44 @@
+extends ../pug/layout.pug
+
+block meta
+  title Конкурс чистоты и порядка
+  meta(name='description' content='')
+
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.news-det.news.a-section
+    .news-det__inner.container
+      h2.news-det__title.title-h2 Конкурс чистоты и порядка
+      .news-det__date.news-date Дата:
+        span  04.12.2020
+
+      .news-det__descr.m-b-40 
+        p.news-det__text.text На&nbsp;вашем рабочем столе всегда чисто и&nbsp;аккуратно? Или вы&nbsp;давно хотели систематизировать папки и&nbsp;документы, но&nbsp;никак не&nbsp;доходили руки? Сейчас самое время навести порядок, расставить всё по&nbsp;местам и&nbsp;получить за&nbsp;это ценные призы!
+        p.news-det__text.text Рациональную организацию рабочих мест офисных сотрудников Теплоэнерго оценят на&nbsp;корпоративном конкурсе, посвященному бережливому офису. В&nbsp;компании стартовал прием заявок на&nbsp;участие в&nbsp;конкурсе по&nbsp;номинациям &laquo;5С. Лучшее рабочее место&raquo;, &laquo;5С. Лучшее подразделение&raquo;. Заявки принимаются с&nbsp;1&nbsp;по&nbsp;18&nbsp;октября, а&nbsp;лучших по&nbsp;порядку будут выбирать с&nbsp;1&nbsp;по&nbsp;30&nbsp;ноября.
+        p.news-det__text.text С&nbsp;методическими рекомендациями по&nbsp;организации рабочих мест по&nbsp;принципам 5С&nbsp;можно ознакомиться в&nbsp;утвержденном стандарте, выложенном в&nbsp;разделе Документы.
+        p.news-det__text.text С&nbsp;критериями оценки рабочих мест можно также ознакомиться в&nbsp;Приложениях &#8470;&nbsp;3&nbsp;и &#8470;&nbsp;4&nbsp;к Положению конкурса.
+        p.news-det__text.text Подать заявку можно от&nbsp;себя лично либо участвовать своим дружным подразделением. Заявку по&nbsp;форме (Приложения &#8470;&nbsp;1&nbsp;и &#8470;&nbsp;2&nbsp;к Положению конкурса) необходимо направить на&nbsp;электронную почту o.dolinka@teploenergo-nn.ru не&nbsp;позднее 18&nbsp;октября 2021&nbsp;года.
+        p.news-det__text.text Конкурс позволит вовлечь больше сотрудников в&nbsp;деятельность по&nbsp;непрерывному улучшению производственных процессов, а&nbsp;также выработать единый подход по&nbsp;организации рабочей зоны офисного сотрудника. Победители соревнования будут награждены специальными призами от&nbsp;генерального директора на&nbsp;торжественном мероприятии в&nbsp;честь Дня энергетика-2021. Торопитесь навести порядок!
+
+      .news-det__data
+        .recent-article__data 
+          span.recent-article__view 125
+          span.recent-article__comment 15
+          .recent-article__em 
+            span.recent-article__like 63
+            span.recent-article__dislike 2
+      .news-det__bottom.return
+        a(href="#").news-det__link.return__link К списку новостей
+
+    +comments()
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

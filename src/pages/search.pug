@@ -1,0 +1,60 @@
+extends ../pug/layout.pug
+
+block meta
+  title Поиск
+  meta(name='description' content='')
+ 
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.orders.search-res.news.a-section
+    .orders__inner.container
+      h2.orders__title.title-h2 Поиск
+    .orders__body.container.container--big
+      .orders__wrapper.pa
+        .pa__menu 
+        .pa__content 
+          section.search-f 
+            form.search-f__cont
+              +field-text({
+                helpText: 'Подсказка',
+                val: '',
+                attrs: {
+                  type: 'text',
+                  name: 'search',
+                  placeholder: 'внутрикорпоративный портал',
+                  required: 'required',
+                }
+              })
+              button(type="button").search-f__btn.btn.btn-accent Поиск
+
+          .search-res__title.btn-sec По запросу #[span.accent “внутрикорпоративный портал”] найдено : #[span 3]
+
+          ul.search__list
+            li.search__i
+              .search__i-title.subtitle История АО Теплоэнерго
+              .search__l-block
+                p.search__i-text.text  Добро пожаловать на внутрикорпоративный портал сотрудников АО «Теплоэнерго»!
+              a(href="#").search__i-link.more-link.btn-sec Подробнее
+
+            li.search__i
+              .search__i-title.subtitle База знаний
+              .search__l-block
+                p.search__i-text.text Добро пожаловать на внутрикорпоративный портал сотрудников АО «Теплоэнерго»!
+              a(href="#").search__i-link.more-link.btn-sec Подробнее
+
+            li.search__i
+              .search__i-title.subtitle Новости
+              .search__l-block
+                p.search__i-text.text Добро пожаловать на внутрикорпоративный портал сотрудников АО «Теплоэнерго»!
+              a(href="#").search__i-link.more-link.btn-sec Подробнее
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

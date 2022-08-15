@@ -1,0 +1,144 @@
+@mixin hide-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text {
+  font: 14px/1.5 $ff-r-l;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 16px;
+  }
+}
+
+.text-bold {
+  font: 14px/1.5 $ff-r-b;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 16px;
+  }
+}
+
+.table-head {
+  font: 14px/1.5 $ff-g-ex-b;
+
+
+  @media (min-width: $screen-xxl) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 13px;
+  }
+}
+
+.table-text {
+  font: 12px/1.5 $ff-r-l;
+
+  @media (min-width: $screen-xl) {
+    font-size: 13px;
+  }
+
+}
+
+.title-h2 {
+  font: 20px $ff-g-ex-b;
+  color: $primary-color;
+  margin-bottom: 28px;
+  text-decoration: none;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+
+.news-title {
+  font: 17px $ff-g-ex-b;
+  margin-bottom: 50px;
+  text-decoration: none;
+  transition: all $transition-time;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 17px;
+  }
+}
+
+.news-date {
+  font: 12px/1.2 $ff-r-r;
+  margin-bottom: 50px;
+  text-decoration: none;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 14px;
+  }
+}
+
+.news-title--sm {
+
+  @media (max-width: ($screen-xl - 1)) {
+    font-size: 14px;
+  }
+
+}
+
+.subtitle {
+  font: 15px $ff-g-ex-b;
+  color: $primary-color;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 18px;
+  }
+}
+
+.text-info {
+  font: 12px $ff-g-ex-b;
+  color: $primary-color;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 13px;
+  }
+}
+
+.btn-sec {
+  font: 13px $ff-g-ex-b;
+
+  @media (min-width: $screen-xl) {
+    font-size: 16px;
+  }
+}
+
+.h4{
+  font: 16px $ff-g-ex-b;
+
+  @media (min-width: $screen-xl) {
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,56 @@
+// В этом файле должны быть стили для БЭМ-блока paper, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.paper {
+  $block-name: &; // #{$block-name}__element
+
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 14px;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px;
+    background-color: $white;
+    margin-bottom: 20px;
+
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      width: calc((100% - 80px) / 3);
+      padding: 30px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 39px;
+      }
+    }
+  }
+
+  &__pic {
+    height: 352px;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      height: 425px;
+    }
+  }
+
+  .recent-article__title {
+    padding-bottom: 0;
+  }
+}

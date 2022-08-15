@@ -1,0 +1,56 @@
+extends ../pug/layout.pug
+
+block meta
+  title Информация для сотрудников
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+  section.info-page.news.a-section
+    .info-page__inner.container
+      h2.info-page__title.title-h2 Информация для сотрудников
+
+      .flex
+        div.flex__list
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Организационная структура
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Справочник сотрудников
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title База знаний
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Шаблоны документов
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Электронная библиотека
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Информация по ДМС
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

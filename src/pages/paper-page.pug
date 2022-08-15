@@ -1,0 +1,92 @@
+extends ../pug/layout.pug
+
+block meta
+  title Газета «Теплые вести»
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+
+  section.album-det.news.a-section(class=allMods)&attributes(attributes)
+    .album-det__inner.container
+      h2.album-det__title.title-h2
+        a(href="").album-det__title-link.title-h2.accent-hover Газета «Теплые вести»  
+      ul.paper__list 
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июль 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июнь 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Май 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июль 2021
+        li.paper__item.m-b-40   
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июнь 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Май 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июль 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Июнь 2021
+        li.paper__item.m-b-40 
+          article.recent-article 
+            .recent-article__pic.paper__pic
+              img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
+            .recent-article__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover(href="#") Май 2021
+
+      +pagination()               
+    
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

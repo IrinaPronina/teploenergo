@@ -1,0 +1,173 @@
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-header {
+
+  background-color: $white;
+  color: $primary-color;
+
+  &__inner {
+    position: relative;
+    height: 96px;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      height: 144px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+
+    @media (min-width: $screen-xxl) {
+      align-items: center;
+    }
+
+    @media (min-width: $screen-xl) {
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+  }
+
+  &__left {
+    width: 70%;
+
+    @media (min-width: $screen-xl) {
+      width: 16%;
+    }
+  }
+
+  &__logo {}
+
+  &__right {
+    width: 78%;
+  }
+
+  &__first {
+    display: flex;
+    flex-direction: column-reverse;
+
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__prime {
+
+
+    @media (max-width: ($screen-xl - 1)) {
+      position: absolute;
+      width: calc(100% - 30px);
+      bottom: 8px;
+      left: 15px;
+    }
+  }
+
+  &__title {
+    font: 12px/1.2 $ff-r-l;
+    color: $accent-color;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 15px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__profile {
+    display: none;
+
+    @media (min-width: $screen-xxl) {}
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      margin-right: 22px;
+    }
+  }
+
+  &__name {
+    font: 16px/1.2 $ff-r-b;
+    color: $primary-color;
+    font-weight: 800;
+  }
+
+  &__position {
+    font: 14px/1.2 $ff-r-l;
+    color: inherit;
+    text-align: right;
+  }
+
+  .main-menu-btn {
+    border: none;
+    background-color: inherit;
+    margin-right: 25px;
+    cursor: pointer;
+    width: 20px;
+    height: 15px;
+
+    @media (min-width: $screen-xxl) {
+
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 24px;
+      height: 16px;
+    }
+  }
+
+  .main-menu-btn__txt {}
+
+  .main-menu-btn__burger {}
+
+  .main-menu-btn__close {
+    display: none;
+  }
+
+  &__search {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+
+    @media (min-width: $screen-xl) {
+      width: 23px;
+      height: 24px;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (min-width: $screen-xxl) {
+      width: 78%;
+      margin-left: auto;
+    }
+
+    @media (min-width: $screen-xl) {}
+
+    @media (min-width: $screen-md) {}
+  }
+}

@@ -1,0 +1,94 @@
+//- Все примеси в этом файле должны начинаться c имени блока (structure)
+
+mixin structure(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+    +structure('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' structure--' + modsList[i].trim();
+      }
+    }
+
+  section.structure.news.a-section
+    .structure__inner.container
+      h2.structure__title.title-h2 Организационная структура
+
+      .structure__first.structure-item 
+        span.structure__first-text Генеральный директор
+      .structure__second 
+        .structure__second-item
+          .structure__second-box.structure-item
+            span.structure__second-text Заместитель генерального директора по оперативному управлению и эксплуатации, технический директор
+          .structure__middle
+            .structure__second-next.structure-item
+              span.structure__second-text Заместитель технического директора
+            .structure__second-next.structure-item
+              span.structure__second-text Заместитель технического директора
+            .structure__second-next.structure-item
+              span.structure__second-text Заместитель технического директора по обеспечению производства
+            .structure__second-next.structure-item
+              span.structure__second-text Заместитель техническогодиректора по охране труда, промышленной и экологической политике
+            .structure__second-next.structure-item
+              span.structure__second-text Депортамент транспорта
+            .structure__second-next.structure-item
+              span.structure__second-text Главный энергетик
+        .structure__second-item
+          .structure__second-box.structure-item
+            span.structure__second-text Заместитель генерального директора по развитию и строительству
+          .structure__middle--two 
+            .structure__min.structure-item
+              span.structure__second-text Директор по развитию
+            .structure__sm
+              .structure__sm--sec.structure-item
+                span.structure__second-text Директор по строительству
+              .structure__sm-next.structure-item 
+                span.structure__second-text Заместитель директора по строительству
+        .structure__second-item
+          .structure__second-box.structure-item
+            span.structure__second-text Заместитель генерального директора по работе с органами власти
+      .structure__third 
+        .structure__third-item
+          .structure__third-box.structure-item--sm.box
+            span.structure__second-text Директор по экономике и финансам
+        .structure__third-item
+          .structure__third-box.structure-item--sm.box
+            span.structure__second-text Главный бухгалтер
+        .structure__third-item
+          .structure__third-box.structure-item--sm
+            span.structure__second-text Департамент правовых и имущественных отношений
+        .structure__third-item
+          .structure__third-box.structure-item--sm.box
+            span.structure__second-text Директор по реализации
+        .structure__third-item
+          .structure__third-box.structure-item--sm
+            span.structure__second-text Департамент коммуникаций и корпоративных проектов
+        .structure__third-item
+          .structure__third-box.structure-item--sm
+            span.structure__second-text Департамент управления персоналом
+        .structure__third-item
+          .structure__third-box.structure-item--sm
+            span.structure__second-text Департамент по закупкам
+        .structure__third-item
+          .structure__third-box.structure-item--sm
+            span.structure__second-text Департамент автоматизиро-ванных систем управления и&nbsp;связи
+        .structure__third-item
+          .structure__third-box.structure-item--sm.box
+            span.structure__second-text Управление рисками
+        .structure__third-item
+          .structure__third-box.structure-item--sm.box
+            span.structure__second-text Управление внутренней безопасности
+
+      .structure__fourth 
+        .structure__fourth-box
+          span.structure__second-text Директор по экономике и финансам
+        .structure__fourth-box
+          span.structure__second-text Директор по экономике и финансам

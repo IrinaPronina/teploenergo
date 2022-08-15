@@ -1,0 +1,162 @@
+// В этом файле должны быть стили для БЭМ-блока recent-media, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.recent-media {
+
+  $block-name: &; // #{$block-name}__element
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+
+    @media (min-width: $screen-lg) {
+      column-gap: 40px;
+    }
+
+    @media (min-width: $screen-sm) {
+      column-gap: 20px;
+    }
+
+  }
+
+  &__left {
+    grid-column: 12 span;
+
+
+    @media (min-width: $screen-lg) {
+      grid-column: 4 span;
+    }
+
+    @media (min-width: $screen-sm) {
+      grid-column: 6 span;
+    }
+
+    @media (max-width: ($screen-xl - 1)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__left-list,
+  &__right-item {
+    list-style: none;
+    background-color: $white;
+    padding: 20px;
+    width: 100%;
+    min-height: 304px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $screen-xl) {
+      height: calc(100% - 60px);
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 30px;
+      min-height: 688px;
+    }
+
+  }
+
+  &__left-item {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px 0;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__right {
+    grid-column: 12 span;
+
+
+    @media (min-width: $screen-lg) {
+      grid-column: 8 span;
+    }
+
+    @media (min-width: $screen-sm) {
+      grid-column: 6 span;
+    }
+  }
+
+  &__right-item {}
+}
+
+.media-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+
+  &__title {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  &__pic {
+    height: 165px;
+    width: 100%;
+    display: block;
+    margin: 0 auto 15px;
+
+    @media (min-width: $screen-xl) {
+      height: 200px;
+      margin: 0 auto 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: auto;
+    }
+
+  }
+
+  &__pic--big {
+    height: auto;
+
+    @media (min-width: $screen-xl) {
+      height: 465px;
+    }
+
+    @media (min-width: $screen-sm) {
+      .media-article__pic--big {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16/9;
+        display: block;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+
+  &__img,
+  & iframe {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__all {}
+
+  &__btn {
+    display: inline-block;
+    width: auto;
+
+
+  }
+}

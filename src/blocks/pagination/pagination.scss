@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.pagination {
+
+  $block-name: &; // #{$block-name}__element
+
+
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 70px;
+  }
+
+  &__list {
+
+    display: block;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+
+  &__num {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $screen-xl){
+      padding: 0 30px;
+    }
+  }
+
+  &__item {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 16px $ff-g-ex-b;
+    color: $primary-color;
+    margin-right: 10px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    transition: all $transition-time;
+
+    &:hover {
+      color: $white;
+      background-color: $accent-color;
+    }
+
+    &--active {
+      background: $primary-color;
+      color: $white;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &__dots {
+    min-width: 15px;
+    border-radius: 50%;
+    font: 16px $ff-g-ex-b;
+    color: $primary-color;
+    margin-right: 10px;
+  }
+
+  &__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 16px $ff-g-ex-b;
+    color: $primary-color;
+    transition: all $transition-time;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}

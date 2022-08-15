@@ -1,0 +1,70 @@
+// В этом файле должны быть стили для БЭМ-блока av-form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.av-form {
+
+  $block-name: &; // #{$block-name}__element
+
+  width: 100%;
+
+  @media (min-width: $screen-xxl) {
+    width: 50%;
+  }
+  @media (min-width: $screen-xl) {
+    width: 70%;
+  }
+
+  &__label {
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+
+
+  &__pull {
+    outline: 0;
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-xl) {}
+  }
+
+  ._file-load{
+    margin: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    padding-left: 10px;
+  }
+}
+
+.pa .av-form .choices {
+  width: 100%;
+  margin-bottom: 25px;
+}

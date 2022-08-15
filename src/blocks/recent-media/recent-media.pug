@@ -1,0 +1,57 @@
+//- Все примеси в этом файле должны начинаться c имени блока (recent-media)
+
+mixin recent-media(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +recent-media('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' recent-media--' + modsList[i].trim();
+      }
+    }
+
+  section.recent-media.a-section(class=allMods)&attributes(attributes)
+    .recent-media__inner.container
+      h2.recent-media__title
+        a(href="#").recent-media__title.title-h2.accent-hover Медиатека
+      .recent-media__wrapper 
+        .recent-media__left 
+          h3.recent-media__title.subtitle  Фото
+          ul.recent-media__left-list 
+            li.recent-media__left-item
+              article.media-article
+                .media-article__pic
+                  img.media-article__img(src="img/news4.jpg", alt="Новость4")
+                h4.media-article__title
+                  a.media-article__link.news-title.news-title--sm.accent-hover(href="#")   Хакатон 2021
+            li.recent-media__left-item.recent-media__left-item
+              article.media-article 
+                .media-article__pic
+                  img.media-article__img(src="img/news5.jpg", alt="Новость5")
+                h4.media-article__title
+                  a.media-article__link.news-title.news-title--sm.accent-hover(href="#")  Послеремонтные гидравлические испытания
+            .media-article__all
+              a(href="#").media-article__btn.btn.btn-accent Все фото
+        .recent-media__right
+          h3.recent-media__title.subtitle  Видео
+          .recent-media__right-item 
+            article.media-article
+              .media-article__pic.media-article__pic--big.video(data-video="https://youtu.be/c3Mn7rQu6Ew")
+                img(src="", alt="" aria-hidden="true").video-poster
+                button.video-play.btn-reset
+                  svg(width='68' height='48' viewBox='0 0 68 48')
+                    path.video-play-shape(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z')
+                    path.video-play-icon(d='M 45,24 27,14 27,34')
+                //- <iframe src="https://www.youtube.com/embed/c3Mn7rQu6Ew?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              h4.media-article__title
+                  a.media-article__link.news-title.news-title--sm.accent-hover(href="#")  Слет работающей молодежи
+            .media-article__all
+              a(href="#").media-article__btn.btn.btn-accent Все видео

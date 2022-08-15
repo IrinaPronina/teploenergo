@@ -1,0 +1,119 @@
+extends ../pug/layout.pug
+
+block meta
+  title Результат опроса
+  meta(name='description' content='')
+
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.quest-result.news.a-section
+    .quest-result__inner.container
+      h2.quest-result__title.title-h2 Результат опроса (Конкурса детского рисунка &laquo;Раскрась маску&raquo; (11-13&nbsp;лет))
+      .quest-result__descr.m-b-40 
+        p.quest-result__text.text Уважаемые сотрудники! Наш коллектив постоянно изменяется. Нам важно знать Ваше мнения по&nbsp;поводу некоторых аспектов Вашего рабочего процесса. Пожалуйста, дайте искренние и&nbsp;обдуманные ответы на&nbsp;предложенные Вам вопросы.
+      form(action="#" method="get").quest-form
+        fieldset.quest-result__form
+          legend.quest-result__subtitle.subtitle Скажите, пожалуйста, как давно Вы работаете в компании?
+          ul.quest-result__list
+            li.quest-result__item 
+              label.quest-result__label
+                input.quest-result__input.text(type="text" name="term" readonly value="До 1 года" )
+                span.quest-result__element.text 6 (3%)
+            li.quest-result__item 
+              label.quest-result__label
+                input.quest-result__input.text(type="text" name="term" readonly value="1-3 года")
+                span.quest-result__element.text 20 (18%)
+            li.quest-result__item 
+              label.quest-result__label
+                input.quest-result__input.text(type="text" name="term" readonly value="3-5 лет")
+                span.quest-result__element.text 15 (14%)
+            li.quest-result__item 
+              label.quest-result__label
+                input.quest-result__input.text(type="text" name="term" readonly value="Более 5 лет")
+                span.quest-result__element.text 59 (43%)
+
+        fieldset.quest-result__form
+          legend.quest-result__subtitle.subtitle Скажите, пожалуйста, как давно Вы работаете в компании?
+          ul.quest-result__list
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Белая заработная плата
+                span.quest-result__element.text 6 (3%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Фиксированный оклад
+                span.quest-result__element.text 20 (18%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Ежеквартальная премия
+                span.quest-result__element.text 15 (14%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Дополнительное медицинское страхование
+                span.quest-result__element.text 59 (43%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Оплачиваемы ежегодный отпуск
+                span.quest-result__element.text 59 (43%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Оплата расходов сотовой связи
+                span.quest-result__element.text 59 (43%)
+            li.quest-result__item 
+              label.quest-result__label
+                span.quest-result__inner-wrapper.quest-result__input.text Другое
+                span.quest-result__element.text 59 (43%)
+
+        fieldset.quest-result__form.quest__form.radio-form.radio-form--img
+          legend.radio-form__subtitle.subtitle Выберите лучший детский рисунок «Раскрась маску»
+          ul.radio-form__list
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img 
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="20 (18%)")
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img 
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="59 (43%)")
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img  
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="15 (13%)")
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img 
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="6 (3%)")
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img 
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="59 (43%)")
+            li.radio-form__item 
+              .radio-form__body 
+                .radio-form__img 
+                  img(src="img/pic1.jpg" alt="")
+                label.radio-form__label
+                  input.radio-form__ex.quest-result__input.text(type="text" name="term" readonly value="20 (18%)") 
+
+
+      .quest-result__bottom.return
+        a(href="/").album-det__link.return__link Назад в список опросов
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

@@ -1,0 +1,114 @@
+//- Все примеси в этом файле должны начинаться c имени блока (comments)
+
+mixin comments(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+    +comments('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' comments--' + modsList[i].trim();
+      }
+    }
+
+  section.comments
+    .comments__inner.container
+      .comments__wrapper 
+        h3.comments__title Комментарии  
+          span (4)
+        ul.comments__list
+          li.comments__item 
+            .comments__box 
+              .comments__header 
+                .comments__author
+                  a.comments__name Анна Смирнова
+              .comments__content
+                span.text Очень полезная информация!
+                .comments__open 
+                  button.comments__reply.btn-sec Ответить  
+                  .comments__footer 
+                    .comments__form 
+                      .comments__input
+                        label.comments__label.table-head Ваше имя
+                          input.comments__text(type="text" placeholder="Введите Ваше имя")
+                          .comments__send
+                            a.comments__btn-send
+                      .comments__input
+                        label.comments__label.table-head Ваше сообщение
+                          textarea.comments__text(name="" cols="30" rows="3" placeholder="Введите Ваше сообщение")
+                      .comments__send
+                        button(type="submit").comments__btn-send.btn.btn-primary Ответить
+          ul.comments__list.comments__list--reply
+            li.comments__item 
+              .comments__box 
+                .comments__header 
+                  .comments__author
+                    a.comments__name Анна Смирнова
+                .comments__content
+                  span.text Очень полезная информация!
+                  .comments__open 
+                    button.comments__reply.btn-sec Ответить  
+                    .comments__footer 
+                      .comments__form 
+                        .comments__input
+                          label.comments__label.table-head Ваше имя
+                            input.comments__text(type="text" placeholder="Введите Ваше имя")
+                            .comments__send
+                              a.comments__btn-send
+                        .comments__input
+                          label.comments__label.table-head Ваше сообщение
+                            textarea.comments__text(name="" cols="30" rows="3" placeholder="Введите Ваше сообщение")
+                        .comments__send
+                          button(type="submit").comments__btn-send.btn.btn-primary Ответить
+          ul.comments__list.comments__list--reply
+            li.comments__item 
+              .comments__box 
+                .comments__header 
+                  .comments__author
+                    a.comments__name Анна Смирнова
+                .comments__content
+                  span.text Очень полезная информация!
+                  .comments__open 
+                    button.comments__reply.btn-sec Ответить  
+                    .comments__footer 
+                      .comments__form 
+                        .comments__input
+                          label.comments__label.table-head Ваше имя
+                            input.comments__text(type="text" placeholder="Введите Ваше имя")
+                            .comments__send
+                              a.comments__btn-send
+                        .comments__input
+                          label.comments__label.table-head Ваше сообщение
+                            textarea.comments__text(name="" cols="30" rows="3" placeholder="Введите Ваше сообщение")
+                        .comments__send
+                          button(type="submit").comments__btn-send.btn.btn-primary Ответить
+        ul.comments__list
+          li.comments__item 
+            .comments__box 
+              .comments__header 
+                .comments__author
+                  a.comments__name Петров Петр
+              .comments__content
+                span.text Сегодня же займусь приборкой рабочего стола, когда закончу, приберу стол коллегим справа
+                .comments__open 
+                  button.comments__reply.btn-sec Ответить  
+                  .comments__footer 
+                    .comments__form 
+                      .comments__input
+                        label.comments__label.table-head Ваше имя
+                          input.comments__text(type="text" placeholder="Введите Ваше имя")
+                          .comments__send
+                            a.comments__btn-send
+                      .comments__input
+                        label.comments__label.table-head Ваше сообщение
+                          textarea.comments__text(name="" cols="30" rows="3" placeholder="Введите Ваше сообщение")
+                      .comments__send
+                        button(type="submit").comments__btn-send.btn.btn-primary Ответить                   
+        button(type="button").comments__leave.btn.btn-primary Оставить комментарий

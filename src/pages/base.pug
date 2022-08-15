@@ -1,0 +1,51 @@
+extends ../pug/layout.pug
+
+block meta
+  title База знаний
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+  section.base.news.a-section
+    .base__inner.container
+      h2.base__title.title-h2 База знаний
+
+      .flex
+        div.flex__list
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Общие документы
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Кадры
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Охрана труда
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Транспорт
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title IT и связь
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

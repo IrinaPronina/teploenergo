@@ -1,0 +1,93 @@
+extends ../pug/layout.pug
+
+block meta
+  title Общие документы
+  meta(name='description' content='')
+
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.orders.rost-offer.news.a-section
+    .orders__inner.container
+      h2.orders__title.title-h2 Общие документы
+    .orders__body.container.container--big
+      .orders__wrapper.pa
+        .pa__menu 
+        .pa__content 
+          .pa__top 
+            section.search-f.search-f--sm 
+              .pa__top-title.btn-sec Поиск по назвнию
+              form.search-f__cont
+                +field-text({
+                  helpText: 'Подсказка',
+                  val: '',
+                  attrs: {
+                    type: 'text',
+                    name: 'search',
+                    placeholder: 'Введите название',
+                    required: 'required',
+                  }
+                })
+                button(type="button").search-f__btn.btn.btn-accent Поиск
+            .pa__top-sec
+              .pa__top-title.btn-sec Поиск по дате
+              .pa__middle-range 
+                .pa__middle-item
+                  input(type="date" name="date" placeholder="От" onchange="this.className=(this.value!=''?'has-value':'')").pa__middle-input.text
+                .pa__middle-item 
+                  input(type="date" name="date" placeholder="До" onchange="this.className=(this.value!=''?'has-value':'')").pa__middle-input.text
+                .pa__middle-btn 
+                  button(type="submit").btn.btn-accent Применить
+
+          .pa__orders.pa-docs
+            ul.pa__orders-list.active
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Приказ о порядке работы АО «Теплоэнерго» в период действия режима повышенной
+                  .pa__order-txt.text 10.11.21
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Положение о проведении соревнования в номинациях 5С
+                  .pa__order-txt.text 10.11.21
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Брендбук АО "Теплоэнерго"
+                  .pa__order-txt.text 10.11.21
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Положения об обеспечении корпоративной мобильной связью
+                  .pa__order-txt.text 10.11.21
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Приказ по основной деятельности № 546/п от 21.04.2021 О внесении изменений в Регламент по работе с письменными обращениями
+                  .pa__order-txt.text 10.11.21
+              li.pa__orders-item.flex
+                .pa__order-ic
+                  img(src="img/doc.svg", alt="")
+                .pa__order-descr 
+                  h3.pa__order-h3.news-title Регламент по работе с письменными обращениями, поступившими от потребителей тепловой энергии и горячей воды в АО «Теплоэнерго»
+                  .pa__order-txt.text 10.11.21
+          .album-det__bottom.return
+            a(href="/").album-det__link.return__link Вернуться к списку альбомов
+    +pagination()  
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

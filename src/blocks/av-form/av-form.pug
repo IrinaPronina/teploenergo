@@ -1,0 +1,40 @@
+//- Все примеси в этом файле должны начинаться c имени блока (av-form)
+
+mixin av-form(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +av-form('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' av-form--' + modsList[i].trim();
+      }
+    }
+
+  form.av-form(class=allMods)&attributes(attributes)
+    .av-form__label.table-head Выберите руководителя
+    select.av-form__select.choices-js
+      option(value="1") Генеральному директору
+      option(value="2") Главному бухгалтеру
+      option(value="3") Коммерческому директору
+    .av-form__label.table-head Сообщение
+    textarea.av-form__textarea.textarea(rows='15' cols='15' type='textarea' name='perk' style='overflow: hidden; overflow-wrap: break-word; ')
+    
+
+    .av-form__bottom
+      button(type="submit").av-form__btn.btn.btn-accent Отправить  
+      ._file-load.text
+      label.av-form__file
+        svg(width='30' height='31' viewBox='0 0 30 31' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M18.7493 9.87451L8.98668 19.7993C8.63504 20.1509 8.4375 20.6278 8.4375 21.1251C8.4375 21.6224 8.63504 22.0993 8.98668 22.4509C9.33831 22.8025 9.81522 23.0001 10.3125 23.0001C10.8098 23.0001 11.2867 22.8025 11.6383 22.4509L23.276 10.6512C23.6242 10.3029 23.9004 9.88955 24.0889 9.43457C24.2773 8.9796 24.3743 8.49197 24.3743 7.99951C24.3743 7.50705 24.2773 7.01942 24.0889 6.56445C23.9004 6.10948 23.6242 5.69608 23.276 5.34786C22.9277 4.99964 22.5143 4.72342 22.0594 4.53496C21.6044 4.34651 21.1168 4.24951 20.6243 4.24951C20.1319 4.24951 19.6442 4.34651 19.1893 4.53496C18.7343 4.72342 18.3209 4.99964 17.9727 5.34786L6.33502 17.1476C5.28013 18.2025 4.6875 19.6332 4.6875 21.1251C4.6875 22.6169 5.28013 24.0477 6.33502 25.1026C7.38992 26.1575 8.82066 26.7501 10.3125 26.7501C11.8043 26.7501 13.2351 26.1575 14.29 25.1026L23.9056 15.4995' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+        span.av-form__text.text Прикрепить файл
+        input#file(type='file' name='file').av-form__pull
+
+

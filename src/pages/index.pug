@@ -1,0 +1,35 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная  
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+  .hello-slogan__wrapper.container 
+    .hello-slogan 
+      span.hello-slogan__text  Добро пожаловать в&nbsp;корпоративный портал АО&nbsp;&laquo;Теплоэнерго&raquo;
+  +recent-news()
+  +recent-media()
+  +accent-block()
+  +paper()
+  +tv()
+  section.accent-block(class=allMods)&attributes(attributes)
+    .accent-block__inner.container
+      .accent-block__content
+        h2.accent-block__title.title-h2 Конкурс детского рисунка &laquo;Зимняя сказка&raquo; (2-4&nbsp;года)
+        img.accent-block__img(src="img/pencil.svg", alt="")
+        .accent-block__descr
+          p.accent-block__text.text Коронавирус вмешался в&nbsp;наши жизни, в&nbsp;жизни детей, изменяя их&nbsp;в&nbsp;непривычное нам русло. Совместные рисунки и&nbsp;родителей&nbsp;&mdash; это своеобразная поддержка в&nbsp;борьбе с&nbsp;коронавирусом, какие нужны меры предосторожности, как важно их&nbsp;соблюдать и&nbsp;какую важную роль играют правила гигиены
+        a(href="#").accent-block__link.more-link Подробнее
+  +hr-help()
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

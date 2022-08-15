@@ -1,0 +1,304 @@
+// В этом файле должны быть стили для БЭМ-блока structure, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.structure {
+
+  $block-name: &; // #{$block-name}__element
+
+  .structure-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  &__first {
+    position: relative;
+    margin: 0 auto;
+    max-width: 320px;
+    background-color: $primary-color;
+    margin-bottom: 30px;
+
+
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $primary-color;
+    }
+
+    &::before {
+      width: 1px;
+      height: 30px;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      width: 262%;
+      height: 1px;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (min-width: $screen-xxl) {
+        width: 262%;
+      }
+    }
+  }
+
+  &__first-text {
+    font: 16px $ff-r-l;
+    color: $white;
+    display: block;
+  }
+
+  &__second {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  &__second-item {
+    position: relative;
+    max-width: 320px;
+
+
+    &:first-child {
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $primary-color;
+      }
+
+      &::before {
+        width: 1px;
+        height: 15px;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+
+      &::after {
+        width: 1px;
+        height: calc(100% - 30px);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    }
+
+    &:nth-child(2) {
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $primary-color;
+      }
+
+      &::after {
+        width: 1px;
+        height: calc(200% + 20px);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    }
+
+    &:last-child {
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $primary-color;
+      }
+
+      &::before {
+        width: 1px;
+        height: 15px;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__second-box {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: $box-color;
+    margin-bottom: 30px;
+  }
+
+  &__second-text {
+    color: $main-color;
+    font: 13px/1.5 $ff-r-l;
+    text-align: center;
+  }
+
+  &__second-next {
+
+    background-color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__middle--two {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $primary-color;
+    }
+
+    &::before {
+      width: 55%;
+      height: 1px;
+      top: 115px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+  }
+
+  &__min {
+    position: relative;
+    background-color: $box-color;
+    flex: 0 0 45%;
+    display: block;
+  }
+
+  &__min,
+  &__sm--sec {
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $primary-color;
+      width: 1px;
+      height: 15px;
+      top: -15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__sm {
+    flex: 0 0 45%;
+  }
+
+  &__sm--sec {
+    background-color: $box-color;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__sm-next {
+    background-color: $white;
+  }
+
+  &__third {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $primary-color;
+    }
+
+    &::before {
+      width: 90.5%;
+      height: 1px;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__third-item {
+    flex: 0 0 9.6%;
+    display: flex;
+  }
+
+  &-item--sm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    border-radius: 5px;
+    background-color: $white;
+
+    ::before {
+      position: absolute;
+      content: "";
+      background-color: #455582;
+      width: 1px;
+      height: 15px;
+      top: -15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  .box {
+    background-color: $box-color;
+  }
+
+  &__fourth {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  &__fourth-box {
+    margin-right: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    border-radius: 5px;
+    background-color: $white;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #455582;
+      width: 1px;
+      height: 30px;
+      top: -30px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    &:first-child {
+      &::before {
+        left: 25%;
+      }
+    }
+  }
+}

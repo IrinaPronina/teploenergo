@@ -1,0 +1,76 @@
+// В этом файле должны быть стили для БЭМ-блока accent-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.accent-block {
+
+  $block-name: &; // #{$block-name}__element
+
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-xxl) {}
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 70px;
+  }
+
+
+  &__content {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(90.35deg, #FE8343 0.22%, #FE5A69 98.57%);
+
+    @media (min-width: $screen-xxl) {
+      padding: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px;
+    }
+  }
+
+
+  &__title {
+    color: $white;
+    margin-top: 0;
+  }
+
+  &__img {
+    margin-bottom: 28px;
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+    padding: 0;
+
+    @media (min-width: $screen-xl) {
+      padding: 0 100px;
+    }
+  }
+
+  &__text {
+    color: $white;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font: 13px $ff-g-ex-b;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

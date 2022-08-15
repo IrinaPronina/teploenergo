@@ -1,0 +1,46 @@
+extends ../pug/layout.pug
+
+block meta
+  title Шаблоны документов
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+
+block content
+  section.doc-templates.news.a-section
+    .doc-templates__inner.container
+      h2.doc-templates__title.title-h2 Шаблоны документов
+
+      .flex
+        div.flex__list
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Командировки
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Отсутствие на работе
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Сверхурочная работа
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+          div.flex__item.item-bg-primary
+            a(href="#").flex__link
+              h4.flex__doc-title.news-title Материальная помощь
+              .flex__btn 
+                span.flex__more.more-link Подробнее
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

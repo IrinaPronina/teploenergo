@@ -1,0 +1,293 @@
+extends ../pug/layout.pug
+
+block meta
+  title РОСТ предложения
+  meta(name='description' content='')
+ 
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.orders.rost-offer.news.a-section
+    .orders__inner.container
+      h2.orders__title.title-h2 РОСТ предложения
+    .orders__body.container.container--big
+      .orders__wrapper.pa
+        .pa__menu 
+          ul.pa__menu-list 
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.pa__menu-link--active.news-title Заявки
+                .pa__menu-bell
+                  svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M8 0C5.23858 0 3 2.23858 3 5V7.94722C3 7.99658 2.98539 8.04483 2.95801 8.0859L1.25488 10.6406C1.08868 10.8899 1 11.1828 1 11.4824C1 12.3206 1.67945 13 2.51759 13H13.4824C14.3206 13 15 12.3206 15 11.4824C15 11.1828 14.9113 10.8899 14.7451 10.6406L13.042 8.0859C13.0146 8.04483 13 7.99658 13 7.94722V5C13 2.23858 10.7614 0 8 0ZM4.5 5C4.5 3.067 6.067 1.5 8 1.5C9.933 1.5 11.5 3.067 11.5 5V7.94722C11.5 8.29272 11.6023 8.63048 11.7939 8.91795L13.497 11.4726C13.499 11.4755 13.5 11.4789 13.5 11.4824C13.5 11.4847 13.4995 11.4873 13.4995 11.4873L13.4989 11.489C13.4989 11.489 13.497 11.4927 13.4948 11.4948C13.4927 11.497 13.489 11.4989 13.489 11.4989C13.489 11.4989 13.4862 11.5 13.4824 11.5H2.51759C2.51378 11.5 2.51097 11.4989 2.51097 11.4989C2.51097 11.4989 2.50729 11.497 2.50515 11.4948C2.50302 11.4927 2.50107 11.489 2.50107 11.489C2.50107 11.489 2.5 11.4862 2.5 11.4824C2.5 11.4789 2.50103 11.4755 2.50295 11.4726L4.20609 8.91795C4.39773 8.63048 4.5 8.29272 4.5 7.94722V5Z' fill='#FF8007')
+                    path(d='M9.98458 14.2495C9.86177 15.2363 9.02007 16 7.99999 16C6.97991 16 6.13821 15.2363 6.0154 14.2495C5.99835 14.1125 6.11192 14 6.24999 14H9.74999C9.88806 14 10.0016 14.1125 9.98458 14.2495Z' fill='#FF8007')
+                  span.pa__menu-num.table-head +5
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.news-title Мои отпуска
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.news-title Задать вопрос
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.news-title РОСТ предложения
+                .pa__menu-bell
+                  svg(width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M8 0C5.23858 0 3 2.23858 3 5V7.94722C3 7.99658 2.98539 8.04483 2.95801 8.0859L1.25488 10.6406C1.08868 10.8899 1 11.1828 1 11.4824C1 12.3206 1.67945 13 2.51759 13H13.4824C14.3206 13 15 12.3206 15 11.4824C15 11.1828 14.9113 10.8899 14.7451 10.6406L13.042 8.0859C13.0146 8.04483 13 7.99658 13 7.94722V5C13 2.23858 10.7614 0 8 0ZM4.5 5C4.5 3.067 6.067 1.5 8 1.5C9.933 1.5 11.5 3.067 11.5 5V7.94722C11.5 8.29272 11.6023 8.63048 11.7939 8.91795L13.497 11.4726C13.499 11.4755 13.5 11.4789 13.5 11.4824C13.5 11.4847 13.4995 11.4873 13.4995 11.4873L13.4989 11.489C13.4989 11.489 13.497 11.4927 13.4948 11.4948C13.4927 11.497 13.489 11.4989 13.489 11.4989C13.489 11.4989 13.4862 11.5 13.4824 11.5H2.51759C2.51378 11.5 2.51097 11.4989 2.51097 11.4989C2.51097 11.4989 2.50729 11.497 2.50515 11.4948C2.50302 11.4927 2.50107 11.489 2.50107 11.489C2.50107 11.489 2.5 11.4862 2.5 11.4824C2.5 11.4789 2.50103 11.4755 2.50295 11.4726L4.20609 8.91795C4.39773 8.63048 4.5 8.29272 4.5 7.94722V5Z' fill='#FF8007')
+                    path(d='M9.98458 14.2495C9.86177 15.2363 9.02007 16 7.99999 16C6.97991 16 6.13821 15.2363 6.0154 14.2495C5.99835 14.1125 6.11192 14 6.24999 14H9.74999C9.88806 14 10.0016 14.1125 9.98458 14.2495Z' fill='#FF8007')
+                  span.pa__menu-num.table-head +5
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.news-title Отпуска моего подразделения
+            li.pa__menu-item 
+              a(href="#").pa__menu-link.news-title Личная карточка сотрудника
+        .pa__content 
+
+          .pa__tabs 
+            a(href="#" data-id="rost").pa__tab.btn РОСТ предложения
+            a(href="#" data-id="bank").pa__tab.btn Банк идей
+            
+
+          .pa__middle
+            .pa__middle-range 
+              .pa__middle-item
+                input(type="date" name="date" placeholder="От" onchange="this.className=(this.value!=''?'has-value':'')").pa__middle-input.text
+              .pa__middle-item 
+                input(type="date" name="date" placeholder="До" onchange="this.className=(this.value!=''?'has-value':'')").pa__middle-input.text
+              .pa__middle-btn 
+                button(type="submit").btn.btn-accent Применить
+            .pa__middle-post 
+              a(href="#").pa__middle-new.btn.btn-primary Подать РОСТ предложение
+
+
+          .pa__orders
+            ul.pa__orders-list#rost
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='#99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление ежегодного оплачиваемого отпуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='#99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление дополнительных выходных
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на перевыпуск пропуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка генеральному директору
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover Заявка на предоставление электронной трудовой книжки
+                .pa__orders-status 
+                  span.pa__orders-clar.text Принята в обработку
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover Заявка на предоставление дополнительных выходных
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на перевыпуск пропуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление очередного оплачиваемого отпуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Принята в обработку
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление очередного оплачиваемого отпуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка генеральному директору
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+
+            ul.pa__orders-list#bank
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 30.09.22 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на перевыпуск пропуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление дополнительных выходных
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item.order-done 
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на перевыпуск пропуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Выполнено
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка генеральному директору
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover Заявка на предоставление электронной трудовой книжки
+                .pa__orders-status 
+                  span.pa__orders-clar.text Принята в обработку
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover Заявка на предоставление дополнительных выходных
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на перевыпуск пропуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление очередного оплачиваемого отпуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text Принята в обработку
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка на предоставление очередного оплачиваемого отпуска
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+              li.pa__orders-item
+                .pa__order-icon
+                  svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z' stroke='#99A2BA' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                    path(d='M17.5 4.375L10 11.25L2.5 4.375' stroke='##99A2BA' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                .pa__orders-date
+                  span.pa__orders-time.text 25.09.21 13:25
+                .pa__orders-title
+                  a(href="#").pa__orders-link.h4.accent-hover  Заявка генеральному директору
+                .pa__orders-status 
+                  span.pa__orders-clar.text В обработке
+
+
+
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

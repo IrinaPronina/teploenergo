@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (accent-block)
+
+mixin accent-block(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +accent-block('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' accent-block--' + modsList[i].trim();
+      }
+    }
+
+  section.accent-block(class=allMods)&attributes(attributes)
+    .accent-block__inner.container
+      .accent-block__content
+        h2.accent-block__title.title-h2 Конкурс детского рисунка «Раскрась маску!»
+        img.accent-block__img(src="img/pencil.svg", alt="")
+        .accent-block__descr
+          p.accent-block__text.text Коронавирус вмешался в&nbsp;наши жизни, в&nbsp;жизни детей, изменяя их&nbsp;в&nbsp;непривычное нам русло. Совместные рисунки и&nbsp;родителей&nbsp;&mdash; это своеобразная поддержка в&nbsp;борьбе с&nbsp;коронавирусом, какие нужны меры предосторожности, как важно их&nbsp;соблюдать и&nbsp;какую важную роль играют правила гигиены
+        a(href="#").accent-block__link.more-link Подробнее
