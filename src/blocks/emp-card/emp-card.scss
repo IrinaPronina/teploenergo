@@ -1,0 +1,44 @@
+// В этом файле должны быть стили для БЭМ-блока emp-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.emp-card {
+
+  $block-name: &; // #{$block-name}__element
+
+  margin-bottom: 100px;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-lg) {
+      margin: 0 -20px;
+    }
+
+    @media (min-width: $screen-sm) {
+      margin: 0 -10px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    flex: 0 0 100%;
+
+    .recent-article {
+      background-color: $white;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 33.333%;
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-sm) {
+      flex: 0 0 50%;
+      padding: 10px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -76,6 +76,11 @@
       height: 200px;
     }
   }
+
+  &__title-link{
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .news {
@@ -105,8 +110,10 @@
   }
 
   &__link {
+    display: inline-block;
     color: $primary-color;
     text-decoration: none;
+    margin-bottom: 20px;
   }
 
   &__pic {

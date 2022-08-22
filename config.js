@@ -15,6 +15,7 @@ let config = {
     'src/scss/variables.scss',
     'src/scss/mixins.scss',
     '../../node_modules/swiper/swiper.scss',
+    '../../node_modules/@fancyapps/ui/dist/fancybox.css',
     '../../node_modules/swiper/modules/pagination/pagination.scss',
     '../../node_modules/choices.js/public/assets/styles/choices.css',
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',

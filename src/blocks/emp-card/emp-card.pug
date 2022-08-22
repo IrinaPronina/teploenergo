@@ -1,0 +1,136 @@
+//- Все примеси в этом файле должны начинаться c имени блока (emp-card)
+
+mixin emp-card(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +emp-card('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' emp-card--' + modsList[i].trim();
+      }
+    }
+
+  section.emp-card(class=allMods)&attributes(attributes)
+    .emp-card__inner.container
+      h3.emp-card__title.sr-only Список сотрудников
+      ul.emp-card__list 
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e1.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Ленина Елена Борисовна
+              .hr-help__position.text-info Сопредседатель регионального штаба ОНФ в Нижегородской области, председатель Нижегородской областной организации профсоюза работников жизнеобеспечения, член Общественной палаты Нижегородской области, Заслуженный работник жилищно-коммунального хозяйства РФ
+              .hr-help__about Отвечает за улучшение качества труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e2.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Марков Павел Александрович
+              .hr-help__position.text-info Генеральный директор АО «Нижегородский водоканал».
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e3.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Пашинин Павел Дмитриевич
+              .hr-help__position.text-info Депутат городской Думы города Нижнего Новгорода
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e4.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Помпаева Светлана Николаевна
+              .hr-help__position.text-info Председатель комитета по управлению городским имуществом и земельными ресурсами администрации Нижнего Новгорода
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e5.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Сивохин Дмитрий Геннадьевич
+              .hr-help__position.text-info Председатель совета директоров. Первый заместитель главы администрации города Нижнего Новгорода
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e6.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Скалкин Денис Анатольевич
+              .hr-help__position.text-info Директор департамента жилья и инженерной инфраструктуры администрации Нижнего Новгорода
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e7.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Фельдман Марк Самуилович
+              .hr-help__position.text-info Вице-президент, Управляющий операционным офисом «Нижегородский» ПАО «Транскапиталбанк», депутат городской Думы города Нижнего Новгорода
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+        li.emp-card__item 
+          article.recent-article.hr-help__article 
+            .recent-article__pic.hr-help__pic
+              img.recent-article__img(src="img/e8.jpg" alt="Руководитель1")
+            .recent-article__meta.hr-help__meta
+              h3.recent-article__title
+                a.recent-article__link.news-title.accent-hover.news-title--sm(href="#") Щёголев Дмитрий Львович
+              .hr-help__position.text-info Проректор по учебной работе ННГАСУ, кандидат технических наук, доцент, автор более 80 работ научного и учебно-методического характера. Советник Российской академии архитектуры и строительных наук
+              .hr-help__about Отвечает за улучшение качества  труда и рабочего места
+              .hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+              .hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос

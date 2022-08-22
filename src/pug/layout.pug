@@ -52,5 +52,17 @@ html(class='page  no-js', lang='ru')
       .page__footer-wrapper
         +page-footer()
 
+    section.big-menu 
+      .big-menu__first
+        .big-menu__f-inner.container
+          +logo('/')
+            img(src="img/logo.svg", alt="logo desc")
+
+          button.big-menu__close.menu-trigger
+
+      .big-menu__second
+        .big-menu__inner.container.container--big
+          +main-nav()
+
     block page-bottom
       script(src='js/bundle.js')

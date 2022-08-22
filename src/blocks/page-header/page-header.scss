@@ -7,6 +7,32 @@
   background-color: $white;
   color: $primary-color;
 
+
+
+  &.open {
+    .page-header__search-f {
+      display: block;
+    }
+
+    @media (max-width: ($screen-md - 1)) {
+      .page-header__logo {
+        img {
+          opacity: 0;
+        }
+      }
+
+      .page-header__pa {
+        display: none;
+      }
+
+      .main-menu-btn {
+        display: none;
+      }
+    }
+
+
+  }
+
   &__inner {
     position: relative;
     height: 96px;
@@ -28,7 +54,7 @@
       align-items: center;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
       align-items: flex-start;
       padding-top: 20px;
     }
@@ -37,8 +63,13 @@
   &__left {
     width: 70%;
 
+
     @media (min-width: $screen-xl) {
       width: 16%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 25%;
     }
   }
 
@@ -46,6 +77,15 @@
 
   &__right {
     width: 78%;
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+      width: 78%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 70%;
+    }
   }
 
   &__first {
@@ -55,7 +95,7 @@
 
     @media (min-width: $screen-xxl) {}
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -65,12 +105,17 @@
 
   &__prime {
 
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
 
     @media (max-width: ($screen-xl - 1)) {
-      position: absolute;
-      width: calc(100% - 30px);
-      bottom: 8px;
-      left: 15px;
+      // position: absolute;
+      // width: calc(100% - 30px);
+      // bottom: 8px;
+      // left: 15px;
     }
   }
 
@@ -82,8 +127,8 @@
       font-size: 16px;
     }
 
-    @media (min-width: $screen-xl) {
-      font-size: 15px;
+    @media (min-width: $screen-md) {
+      font-size: 14px;
     }
   }
 
@@ -91,6 +136,34 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+  }
+
+  &__pa {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+
+    &.open {
+      .pa-trigger {
+        transform: rotate(180deg);
+
+        svg {
+          path {
+            stroke: $accent-color;
+          }
+        }
+      }
+
+      .page-header__pa-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(100%);
+      }
+
+
+    }
   }
 
   &__profile {
@@ -124,9 +197,7 @@
     width: 20px;
     height: 15px;
 
-    @media (min-width: $screen-xxl) {
-
-    }
+    @media (min-width: $screen-xxl) {}
 
     @media (min-width: $screen-xl) {
       width: 24px;
@@ -134,9 +205,6 @@
     }
   }
 
-  .main-menu-btn__txt {}
-
-  .main-menu-btn__burger {}
 
   .main-menu-btn__close {
     display: none;
@@ -154,20 +222,208 @@
       width: 23px;
       height: 24px;
     }
+
+
+    &.open {
+      .page-header__search-btn {
+        display: none;
+      }
+
+      .page-header__search-close {
+        display: block;
+      }
+    }
+  }
+
+  &__search-f {
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: -140px;
+    width: 96%;
+    min-width: 265px;
+    background-color: $white;
+
+
+    @media (min-width: $screen-xl) {
+      width: 97%;
+    }
+
+    @media (min-width: $screen-md) {
+      top: 0;
+      left: 0;
+    }
+
+    .field-text__input-wrap {
+      display: flex;
+    }
+
+    &.search-f {
+      margin-bottom: 0;
+    }
+
+    &.search-f .field-text__input {
+      margin-right: 10px;
+      padding: 13px 20px;
+    }
+
+    &.search-f .field-text {
+      width: 100%;
+    }
+
+    .search-f__btn {
+      display: none;
+
+
+      @media (min-width: $screen-lg) {
+        display: block;
+        width: 18.5%;
+      }
+    }
   }
 
   &__menu {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 
     @media (min-width: $screen-xxl) {
       width: 78%;
       margin-left: auto;
     }
 
-    @media (min-width: $screen-xl) {}
+    @media (min-width: $screen-xl) {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
 
-    @media (min-width: $screen-md) {}
+
+  }
+
+  &__item {
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font: 16px $ff-r-l;
+      transition: color $transition-time;
+    }
+
+    &:hover {
+      a {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__ics {
+    display: flex;
+    align-items: center;
+  }
+
+  &__pa-trigger {
+    margin-right: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 40px;
+    }
+  }
+
+  &__search-btn {
+    display: block;
+  }
+
+  &__search-close {
+    display: none;
+  }
+}
+
+.menu-active {
+  .main-menu-btn__close {
+    display: block;
+  }
+
+  .main-menu-btn__burger {
+    display: none;
+  }
+
+  .big-menu__close {
+    display: block;
+  }
+}
+
+.pa-trigger {
+  border: none;
+  background-color: transparent;
+  // position: absolute;
+  // right: 0;
+  // top: 6px;
+  // line-height: 0;
+  transition: transform $transition-time;
+
+
+
+  svg {
+    pointer-events: none;
+
+    path {
+      stroke: $primary-color;
+      fill: none;
+      transition: stroke $transition-time;
+    }
+  }
+}
+
+.page-header__pa-menu {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  display: none;
+  opacity: 0;
+  width: 100%;
+  transform: translateY(-1000%);
+  transition: transform $transition-time;
+  min-width: 86vw;
+  max-width: 276px;
+
+  @media (min-width: $screen-xl) {
+    left: 0;
+  }
+
+  @media (min-width: $screen-xs) {
+    bottom: 0;
+    min-width: 229px;
+  }
+
+  .pa__menu-list {
+    margin-right: 0;
+    background-color: $white;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(69, 85, 130, 0.13);
+  }
+
+  .pa__menu-item {
+    margin-bottom: 20px;
+  }
+
+  .pa__menu-bell {
+    top: 0;
+  }
+
+  .pa__menu-link {
+    text-decoration: none;
+    border: none;
+    font: 15px $ff-r-l;
+    color: $primary-color;
+    transition: color $transition-time;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
 }

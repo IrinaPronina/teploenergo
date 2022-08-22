@@ -1,0 +1,42 @@
+extends ../pug/layout.pug
+
+block meta
+  title Руководство
+  meta(name='description' content='')
+
+//- block append head
+//-   link(rel='stylesheet' href='css/some.css')
+
+
+block content
+
+  section.chefs.news.a-section
+    .chefs__inner.container
+      h2.chefs__title.title-h2 Руководство
+      .chefs__big 
+        .chefs__article 
+          .chefs__i-block 
+            .chefs__img 
+              img(src="img/e9.jpg", alt="")
+            .chefs__data.hr-help__data
+                a(href="tel:+78312779131").hr-help__cont.hr-help__tel.text-info +7 (831) 277-91-31
+                a(href="mailto:personal@teploenergo-nn.ru").hr-help__cont.hr-help__email.text-info personal@teploenergo-nn.ru
+            .chefs__all.hr-help__all
+                a(href="#").media-article__btn.btn.btn-accent Задать вопрос
+          .chefs__t-block
+            .chefs__info
+              h4.chefs__name.news-title Халтурин Илья Вячеславович
+              p.chefs__pos.text-info Генеральный директор АО "Теплоэнерго"
+              p.chefs__text.text Родился 31&nbsp;октября 1979 года в&nbsp;городе Дзержинск (Горьковская область). Окончил Волжскую государственную академию водного транспорта по&nbsp;специальности &laquo;Эксплуатация судовых энергетических установок&raquo; (квалификация &laquo;Инженер-механик&raquo;), Нижегородский государственный технический университет по&nbsp;специальности &laquo;Экономика и&nbsp;управление на&nbsp;предприятии химической промышленности&raquo; (квалификация &laquo;экономист-менеджер&raquo;).
+              p.chefs__text.text В&nbsp;энергетической отрасли работает с&nbsp;2004&nbsp;года. Начинал с&nbsp;должности машиниста-обходчика по&nbsp;турбинному оборудованию котлотурбинного цеха Дзержинской ТЭЦ. Работал заместителем начальника турбинного цеха на&nbsp;Сормовской ТЭЦ (филиал Нижегородской генерирующей компании).
+              p.chefs__text.text С&nbsp;2008 по&nbsp;2015 годы работал в&nbsp;Нижегородском филиале ОАО &laquo;ТГК-6&raquo; на&nbsp;должности начальника ПТО, заместителя технического директора по&nbsp;эксплуатации, технического директора&nbsp;&mdash; главного инженера Новогорьковской ТЭЦ. С&nbsp;2015 года работал в&nbsp;ОАО &laquo;Волжская ТГК&raquo;, ПАО &laquo;Т&nbsp;Плюс&raquo; в&nbsp;должности главного инженера группы строящихся объектов Новокуйбышевского, Пермского филиалов по&nbsp;реализации приоритетных инвестиционных проектов.
+            .chefs__btn 
+              a(href="#").chefs__link.btn-sec.more-link Подробнее
+  +emp-card()
+    
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')calc

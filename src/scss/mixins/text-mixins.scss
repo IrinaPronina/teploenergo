@@ -142,3 +142,15 @@
   }
 }
 
+.h1{
+  font: 23px $ff-g-ex-b;
+
+  @media (min-width: $screen-xxl) {
+    font-size: 44px;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 34px;
+  }
+}
+

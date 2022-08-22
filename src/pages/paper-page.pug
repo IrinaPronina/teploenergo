@@ -14,7 +14,7 @@ block content
     .album-det__inner.container
       h2.album-det__title.title-h2
         a(href="").album-det__title-link.title-h2.accent-hover Газета «Теплые вести»  
-      ul.paper__list 
+      ul.paper__list.paper-list
         li.paper__item.m-b-40 
           article.recent-article 
             .recent-article__pic.paper__pic
@@ -78,8 +78,9 @@ block content
             .recent-article__meta
               h3.recent-article__title
                 a.recent-article__link.news-title.accent-hover(href="#") Май 2021
-
-      +pagination()               
+      .album-det__bottom.return
+        a(href="/").album-det__link.return__link Вернуться в медиатеку
+    +pagination()               
     
 
 

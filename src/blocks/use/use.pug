@@ -1,0 +1,46 @@
+//- Все примеси в этом файле должны начинаться c имени блока (use)
+
+mixin use(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +use('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' use--' + modsList[i].trim();
+      }
+    }
+
+  .use(class=allMods)&attributes(attributes)
+    ul.use__list 
+      li.use__item 
+        .use__body 
+          .use__icon
+            svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M7 29H25' stroke='#455582' stroke-width='2' stroke-linecap='round' fill='none' stroke-linejoin='round')
+              path(d='M16 17C18.2091 17 20 15.2091 20 13C20 10.7909 18.2091 9 16 9C13.7909 9 12 10.7909 12 13C12 15.2091 13.7909 17 16 17Z' fill='none' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M26 13C26 22 16 29 16 29C16 29 6 22 6 13C6 10.3478 7.05357 7.8043 8.92893 5.92893C10.8043 4.05357 13.3478 3 16 3C18.6522 3 21.1957 4.05357 23.0711 5.92893C24.9464 7.8043 26 10.3478 26 13V13Z' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none')
+          h4.use__title Выбираете клинику из списка
+      li.use__item 
+        .use__body 
+          .use__icon
+            svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z' stroke='#455582' stroke-width='2' stroke-miterlimit='10' fill='none')
+              path(d='M16 9V16H23' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none')
+          h4.use__title Обращайтесь в удобное для вас время
+      li.use__item 
+        .use__body 
+          .use__icon
+            svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M27.001 9H5.00098C4.44869 9 4.00098 9.44772 4.00098 10V26C4.00098 26.5523 4.44869 27 5.00098 27H27.001C27.5533 27 28.001 26.5523 28.001 26V10C28.001 9.44772 27.5533 9 27.001 9Z' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none')
+              path(d='M21 9V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H13C12.4696 5 11.9609 5.21071 11.5858 5.58579C11.2107 5.96086 11 6.46957 11 7V9' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none')
+              path(d='M16 14.5V21.5' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M19.5 18H12.5' stroke='#455582' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          h4.use__title Получаете медицинские услуги без очередей и хлопот

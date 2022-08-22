@@ -79,6 +79,7 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "autosize": "^4.0.2",
     "baron": "^3.0.3",
     "choices.js": "^9.1.0",

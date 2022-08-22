@@ -1,0 +1,99 @@
+// В этом файле должны быть стили для БЭМ-блока med, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.med {
+
+  $block-name: &; // #{$block-name}__element
+
+  margin-bottom: 70px;
+
+  svg {
+    path {
+      fill: none;
+      stroke: $pagin-color;
+    }
+  }
+
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-lg) {
+      margin: 0 -32px;
+    }
+
+    @media (min-width: $screen-sm) {
+      margin: 0 -10px;
+    }
+  }
+
+  &__item {
+
+    margin-bottom: 20px;
+    flex: 0 0 100%;
+    display: flex;
+
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 33.333%;
+      padding: 32px;
+    }
+
+    @media (min-width: $screen-sm) {
+      flex: 0 0 50%;
+      padding: 10px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    background-color: $white;
+    padding: 30px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__title {
+    display: block;
+    text-decoration: none;
+    font: 18px $ff-g-ex-b;
+    color: $primary-color;
+    margin: 0 0 28px;
+
+
+    @media (min-width: $screen-lg) {
+      font-size: 22px;
+    }
+  }
+
+  &__address {
+    white-space: nowrap;
+  }
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__data {
+    display: inline-block;
+    color: $primary-color;
+    white-space: normal;
+  }
+
+  p{
+    margin-bottom: 6px;
+  }
+}

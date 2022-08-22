@@ -12,11 +12,10 @@ block content
 
   section.album-det.news.a-section(class=allMods)&attributes(attributes)
     .album-det__inner.container
-      h2.album-det__title.title-h2
-        a(href="").album-det__title-link.title-h2.accent-hover Июль 2021
-      ul.paper__list 
+      h2.album-det__title.title-h2.title-h2 Июль 2021
+      ul.paper__list.paper-list
         li.paper__item.m-b-40 
-          article.recent-article 
+          article.recent-article    
             .recent-article__pic.paper__pic
               img.recent-article__img.recent-article__img--paper(src="img/paper1.jpg", alt="Новость1")
             .recent-article__meta
@@ -87,7 +86,9 @@ block content
               time(datetime="2022-15-06 19:00").recent-article__date 15.06.2022
               h3.recent-article__title
                 a.recent-article__link.news-title.accent-hover(href="#")  Рабочий настрой
-      +pagination()               
+      .album-det__bottom.return
+        a(href="/").album-det__link.return__link Вернуться в медиатеку
+    +pagination()               
     
 
 

@@ -2,14 +2,14 @@
 
 import ready from 'Utils/documentReady.js';
 
-ready(function() {
+ready(function () {
 
   // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
   var linkClassName = 'main-nav__link';
   var linkClassNameShowChild = 'main-nav__item--show-child';
   var findLinkClassName = new RegExp(linkClassName);
   // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
-  document.addEventListener('focus', function(event) {
+  document.addEventListener('focus', function (event) {
     // Если событие всплыло от одной из ссылок гл. меню
     if (findLinkClassName.test(event.target.className)) {
       // Добавим классы, показывающие списки вложенных уровней, на всех родителей
@@ -20,16 +20,39 @@ ready(function() {
     }
   }, true);
   // Слежение за всплывшим событием blur (нужно убрать класс, показывающий потомков)
-  document.addEventListener('blur', function(event) {
+  document.addEventListener('blur', function (event) {
     // Если событие всплыло от одной из ссылок гл. меню
     if (findLinkClassName.test(event.target.className)) {
       // Уберем все классы, показывающие списки 2+ уровней
-      var parents = document.querySelectorAll('.'+linkClassNameShowChild)
+      var parents = document.querySelectorAll('.' + linkClassNameShowChild)
       for (var i = 0; i < parents.length; i++) {
         parents[i].classList.remove(linkClassNameShowChild);
       }
     }
   }, true);
+
+
+
+  const toggler = document.querySelectorAll('.main-nav__toggler');
+
+
+  if (toggler) {
+    const accItems = document.querySelectorAll('.main-nav__item--has-child');
+
+    if (accItems) {
+
+      for (let i = 0; i < accItems.length; i++) {
+        let accItem = accItems[i];
+
+        accItem.addEventListener("click", function (e) {
+          const accBtn = accItem.querySelector(".main-nav__toggler");
+          console.log("ggg");
+          console.log(accBtn);
+          accBtn.classList.toggle('active');
+        });
+      }
+    }
+  }
 
 
 
@@ -41,42 +64,42 @@ ready(function() {
    * @param  {String} selector Selector to match against [optional]
    * @return {Array}           The parent elements
    */
-  var getParents = function ( elem, selector ) {
+  var getParents = function (elem, selector) {
 
-      // Element.matches() polyfill
-      if (!Element.prototype.matches) {
-          Element.prototype.matches =
-              Element.prototype.matchesSelector ||
-              Element.prototype.mozMatchesSelector ||
-              Element.prototype.msMatchesSelector ||
-              Element.prototype.oMatchesSelector ||
-              Element.prototype.webkitMatchesSelector ||
-              function(s) {
-                  var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                      i = matches.length;
-                  while (--i >= 0 && matches.item(i) !== this) {} // eslint-disable-line
-                  return i > -1;
-              };
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+      Element.prototype.matches =
+        Element.prototype.matchesSelector ||
+        Element.prototype.mozMatchesSelector ||
+        Element.prototype.msMatchesSelector ||
+        Element.prototype.oMatchesSelector ||
+        Element.prototype.webkitMatchesSelector ||
+        function (s) {
+          var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+            i = matches.length;
+          while (--i >= 0 && matches.item(i) !== this) {} // eslint-disable-line
+          return i > -1;
+        };
+    }
+
+    // Setup parents array
+    var parents = [];
+
+    // Get matching parent elements
+    for (; elem && elem !== document; elem = elem.parentNode) {
+
+      // Add matching parents to array
+      if (selector) {
+        if (elem.matches(selector)) {
+          parents.push(elem);
+        }
+      } else {
+        parents.push(elem);
       }
 
-      // Setup parents array
-      var parents = [];
+    }
 
-      // Get matching parent elements
-      for ( ; elem && elem !== document; elem = elem.parentNode ) {
-
-          // Add matching parents to array
-          if ( selector ) {
-              if ( elem.matches( selector ) ) {
-                  parents.push( elem );
-              }
-          } else {
-              parents.push( elem );
-          }
-
-      }
-
-      return parents;
+    return parents;
 
   };
 
